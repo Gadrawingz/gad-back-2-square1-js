@@ -117,4 +117,7 @@ document.write(`${bookNumber}<br>`)
 // 6. The “undefined” value: 
 // The special value undefined also stands apart. It means that “value is not assigned”.
 let bookName = undefined;
-document.write(`${bookName}<br>`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+document.write(`${bookName}<br>`) 
+
+// typeof: typeof operator returns the type of the operand.
+document.write(`${bookName}<br>`);
