@@ -121,3 +121,7 @@ document.write(`${bookName}<br>`)
 
 // typeof: typeof operator returns the type of the operand.
 document.write(`${bookName}<br>`);
+document.write(`${typeof(Math)}<br>`);
+document.write(`${typeof(null)}<br>`);
+document.write(`${typeof(alert)}<br>`);
+document.write(`${typeof(Symbol("id"))}<br>`);
