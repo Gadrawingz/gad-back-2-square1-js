@@ -50,6 +50,26 @@ document.write("<br>", null + undefined)
 // Misc.
 document.write("<br>", 4 + 2 + '1') // 61 not "421"
 
+// Numeric conversion: Unary+
+let b = 5;
+document.write("<br>", +b) // 5 
+document.write("<br>", -b) // -5
+document.write("<br>", +true) // 1
+document.write("<br>", +"") // 0
+
+
+// More on this samples:
+let liverpool = "14";
+let arsenal = "6";
+let swansea = "3"; 
+document.write("<br>", typeof liverpool) // str
+document.write("<br>", typeof +liverpool) // num
+document.write("<br>", +liverpool + +swansea) // 17
+document.write("<br>", Number(liverpool) + Number(swansea)) // 17 
+
+
+
+
 // 1.B.Explicit Conversion: (Coercion)
 // It occurs when JS engine converts one data type to the right type automatically.
 

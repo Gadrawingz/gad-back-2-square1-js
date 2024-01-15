@@ -1,11 +1,21 @@
-// An operand: is what operators are applied to. 
-// UNARY: An operator is unary if it has a single operand. 
-// For example: The unary negation - reverses the sign of a number:
-let posNumber = 30;
-let negNumber = -posNumber;
-document.write('<br>', negNumber)
+// 1. Reminder (%) Operator
+// n % m is the remainder of integer division of n by m
+let number1 = 40;
+let number2 = 4;
+let number3 = 3;
+document.write("<br>"+number1 % 16); 
+// Because 40 / 16 Rem is 8
 
-// An operator is binary if it has two operands. 
-// The same minus exists in binary form as well:
-let x = 30, y = -10
-document.write('<br>', x - y)
+
+// 2. Exponentiation **
+// g ** h g raises to the power of h
+document.write("<br>"+number1 ** number2)
+document.write("<br>"+40 ** 2) // 1600
+
+// NB1:(Power of 1/2 is the same as square root)
+document.write("<br>", 5 ** (1/2))
+document.write("<br>", 5 ** 2)
+
+// NB2:(Power of 1/3 is the same as cubic root)
+document.write("<br>", 5 ** (1/3))
+document.write("<br>", 5 ** 2)
