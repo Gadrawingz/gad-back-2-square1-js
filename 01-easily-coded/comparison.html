@@ -45,7 +45,7 @@ compare the second characters the same way.
 Otherwise, the longer string is greater.
 */
 
-document.write("<hr>", "FLOOR" > "FLOOD"); // true
+document.write("<br>", "FLOOR" > "FLOOD"); // true
 /*
 6. Here we go:
 This comparison needs more steps as strings are compared character-by-character:
@@ -58,8 +58,26 @@ Stop here. The first string is greater.
 */
 
 
+document.write("<hr>", 'A' == 'a'); // false
+document.write("<br>", "L" != "l"); // true
+document.write("<br>", "m" > "M"); // true
+document.write("<br>", "d" < "D"); // false
+/* 
+Comparison is not based on real dictionary, but Unicode order.
+For instance, case matters. 
+A capital letter "A" is not equal to the lowercase "a". 
+Which one is greater? The lowercase "a". 
+Why? Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode)
+*/
 
+// Comparison of different types
+// When comparing values of different types, JS converts the values to numbers.
+document.write("<br>", "2" < 2); // false
+document.write("<br>", "03" > 1); // false // 03 becomes 3
 
+// For boolean values, true becomes 1 and false becomes 0.
+document.write("<br>", true < 1); // false
+document.write("<br>", false == 0); // false
 
 </script>
 </body>
