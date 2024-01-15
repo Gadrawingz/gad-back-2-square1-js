@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison | Gad JS</title>
+</head>
+<body>
+<script>
+
+
+// Comparison
+// 1. Boolean is the result;
+// true: means “yes”, “correct” or “the truth”.
+// false: means “no”, “wrong” or “not the truth”.
+let result1;
+let a = 3;
+let b = 60;
+let c = 40;
+
+result1 = a > b
+document.write("<br>", result1); // false
+document.write("<br>", b != c); // true
+
+// String comparison
+// To compare strings, JS uses the so-called “dictionary” or “lexicographical” order.
+// Means that strings are compared letter-by-letter.
+let letterK = 'K'
+let letterC = 'C'
+let letterZ = 'Z'
+document.write("<hr>", letterC > 'B'); // true
+document.write("<br>", letterZ != 'N'); // false
+document.write("<br>", letterZ < 'P'); // true
+
+
+/*
+The algorithm to compare two strings is simple:
+-----------------------------------------------
+1. Compare the first character of both strings.
+2. If the first character from the first string is greater (or less) than the other string’s, then the first string is greater (or less) than the second. We’re done.
+3. Otherwise, if both strings’ first characters are the same, 
+compare the second characters the same way.
+4. Repeat until the end of either string.
+5. If both strings end at the same length, then they are equal. 
+Otherwise, the longer string is greater.
+*/
+
+document.write("<hr>", "FLOOR" > "FLOOD"); // true
+/*
+6. Here we go:
+This comparison needs more steps as strings are compared character-by-character:
+F is the same as F.
+L is the same as L.
+O is the same as O
+O is the same as O
+R is greater than D
+Stop here. The first string is greater.
+*/
+
+
+
+
+
+</script>
+</body>
+</html>

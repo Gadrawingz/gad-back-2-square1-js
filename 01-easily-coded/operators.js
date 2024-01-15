@@ -64,3 +64,28 @@ num5 *= 2 + 3; // same as num5 * 5, 6 * 5
 document.write("<br>", num5) // 30
 
 
+// Handling increment/decrement
+// Inc: Increasing a variable(number) by one.
+let bCounter = 5;
+bCounter++;
+document.write("<hr>", bCounter) // 6
+bCounter++;
+document.write("<br>", bCounter) // 7
+bCounter++;
+document.write("<br>", bCounter) // 8
+
+
+// Comma operator;
+// Commonly used to write a shorter code.
+// Also allows to evaluates several expression, dividing them with comma
+// Each one is evaluated but only the result of the last one is returned
+let several = (5 + 4, 7 + 2, 43 - 21);
+document.write("<br>", several) // 23
+// But comma has a very low precedence
+
+
+// INC/DEC can only be applied to variables.
+// 53++ will give an error, let n=53, then n++
+
+
+
