@@ -79,6 +79,33 @@ document.write("<br>", "03" > 1); // false // 03 becomes 3
 document.write("<br>", true < 1); // false
 document.write("<br>", false == 0); // false
 
+// Hold up
+document.write("<hr>", Boolean(0) ); // false
+document.write("<br>", Boolean("0") ); // true
+document.write("<br>", Boolean(0) == Boolean("0") ); // false
+// Funny Consequence, 2 values are equal. 1 of them is true 
+// as a boolean and the other one is false as a boolean.
+
+
+// Comparison...
+document.write("<hr>", 0 == false ); // true
+document.write("<br>", '' == false ); // true
+document.write("<br>", 0 === false ); // false, because the types are different
+
+// Comparison with null and undefined
+document.write("<hr>", null === undefined ); // false
+document.write("<br>", null == undefined  ); // true
+
+// Comparison of null with zero
+document.write("<hr>", null > 0 ); // false
+document.write("<br>", null == 0 ); // false
+document.write("<br>", null >= 0 ); // true
+
+// The value undefined shouldn’t be compared to other values:
+document.write("<hr>", undefined > 0 ); // false
+document.write("<br>", undefined < 0 ); // false
+document.write("<br>", undefined == 0 ); // false
+
 </script>
 </body>
 </html>
