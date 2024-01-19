@@ -1,0 +1,1 @@
+// A number 0, an empty string "", null, undefined, and NaN all become false. Because of that they are called “falsy” values.

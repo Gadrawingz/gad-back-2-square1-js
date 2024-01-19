@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and Falsy</title>
+</head>
+<body>
+    <h1>Truthy and Falsy</h1>
+    <script>
+
+    /*
+    A number 0, an empty string "", null, undefined, and NaN all become false. 
+    Because of that they are called “falsy” values.
+    */
+    if(0) {
+        document.write("Falsy..."); // Not run
+    }
+
+    if(" ") {
+        document.write("Any other shit run<br>"); // This wil run   
+    }
+
+    if(true) { // or 1
+        document.write("True/1 can run also<br>"); // It will run   
+    }
+
+
+    // With else if:
+    // it lets us test several variants of a condition.
+    let language = prompt("The best programming lang for web?", "")
+
+    if(language == 'JavaScript') {
+        document.write("You are right!"); // For truthy   
+    } else {
+        document.write("<br>😠How can you be so wrong like that?")
+    }
+
+    </script>
+</body>
+</html>
