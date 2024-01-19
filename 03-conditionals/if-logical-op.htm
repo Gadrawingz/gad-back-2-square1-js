@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operator</title>
+</head>
+<body>
+<script>
+
+// 1. Logical OR (||) 
+// If any of its args are true, it return true, otherwise false.
+document.write(`${true || false}<br>`); // same as 1 || 0
+document.write(`${false || false}<br>`); // same as 0 || 0
+document.write(`${0 || 1}<br>`); // same as 0 || 0
+
+// More conditions can be passed!
+let hour = 10;
+let isWeekend = true;
+let isDayOff = false;
+
+if(hour < 10 || hour > 18 || isWeekend || isDayOff) {
+    document.write(`The office is closed!<br>`);
+}
+
+/*
+OR "||" finds the first truthy value
+-------------------------------------
+The extended algorithm works as follows.
+The OR || operator does the following:
+
+1. Evaluates operands from left to right.
+
+2. For each operand, converts it to boolean. If the result is 
+true, stops and returns the original value of that operand.
+
+3. If all operands have been evaluated (i.e. all were false), returns the last operand.
+
+= A value is returned in its original form, without the conversion.
+= In other words, a chain of OR || returns the first truthy value 
+or the last one if no truthy value is found.
+*/
+document.write(`${ null || 1 }<br>`); // 1 is the 1st truthy value
+document.write(`${ null || 0 || 1 }<br>`); 
+// 1 is the 1st truthy value
+document.write(`${ null || 0 || undefined || 1 }<hr>`); 
+// all falsy, returns the last value
+
+// Getting the 1st truthy value from a list of variables/expressions
+let firstName = "";
+let lastName = "";
+let nickName = "SuperNinja"; // If Blank, it will show Anonymous
+let theName= firstName || lastName || nickName || "Anonymous";
+// I have firstName, lastName and nickName variables, 
+// all optional (i.e. can be undefined or have falsy values).
+// OR(||) will choose the one that has the data and show it 
+// (or "Anonymous" if nothing set):
+document.write(`${ theName }<hr>`); 
+
+
+
+</script>
+</body>
+</html>
