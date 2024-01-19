@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Operator(?) </title>
+</head>
+<body>
+<script>
+// Sometimes, we need to assign a variable depending on a condition
+let accessAllowed;
+
+// Asking user to enter age for checking
+let age = prompt("Your age please?", '')
+if(age > 18) {
+    accessAllowed = true;
+} else {
+    accessAllowed = false;
+}
+
+document.write(`Status for allowance: ${accessAllowed}<br>`)
+
+
+// So-called 'conditional' or 'question mark' 
+// operator makes thr job easier and simpler.
+// Sometimes it's called "ternary" bcz it has 3 operands
+// Syntax: let result = condition ? value1 : value2
+let accessAllowed2 = (age > 18) ? true : false;
+let aboveInShort = accessAllowed2;
+// or let accessAllowed = age > 18 ? true : false;
+// Here, we can omit parentheses() bcz the ? operator has a 
+// low precedence, so it executes after the comparison.
+
+absenceNumbers = prompt('Number of Absence: ', '')
+let readyForExam = (absenceNumbers > 10 ) ? true : false;
+document.write(`Allowed to sit for exam?: ${readyForExam}<br>`)
+
+// Code2: We can avoid using the ? operator because the comparison
+// itself returns true/false.
+let ourNumber = prompt("Any number to check if its odd/even", '');
+let isNumberOdd = ourNumber % 2 != 0;
+// same as:
+// isNumberOdd = number % 2 != 0 ? true : false;
+document.write(`Is number odd? : ${isNumberOdd}<br>`)
+
+</script>
+
+</body>
+</html>

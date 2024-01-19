@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Operator(?) </title>
+</head>
+<body>
+<script>
+// Multiple ?
+// A sequence of ? can return a value that depends on more than 1 cond
+
+let day = prompt('Day number? ', 4);
+
+// Multiple ? can be used here
+let dayName = (day == 1) ? 'Monday' :
+    (day == 2) ? 'Tuesday' :
+    (day == 3) ? 'Wednesday' :
+    (day == 4) ? 'Thursday' :
+    (day == 5) ? 'Friday' :
+    (day == 6) ? 'Saturday' :
+    (day == 7) ? 'Sunday' : 'Invalid day!'
+document.write(`Day Name: ${dayName}<br>`)
+
+// Multiple ? again (instead of if else if)
+let age = 134;
+let message = (age > 1 && age < 5) ? "Baby child" :
+    (age > 5 && age < 20) ? 'Teenager' :
+    (age > 20 && age < 40) ? 'Adult' :
+    (age > 40 && age < 120) ? 'Oldie' : 'Unusual age!';
+document.write(`Message about age: ${message}<br>`)
+
+/*
+It may be difficult at first to grasp what’s going on.
+A sequence of tests:
+
+1. The first question mark checks whether age < 4.
+2. If true, it returns 'Baby child'. Otherwise, it continues 
+to the expression after the colon “:”, checking age < 20.
+
+3. If that’s true, it returns 'Teenager'. Otherwise, it continues to the expression after the next colon ":", checking age < 100.
+
+4. If that’s true, it returns 'Adult'. Otherwise, it continues to
+the expression after the last colon “:”, returning 'Unusual age!'.
+*/
+
+let abbreviation = "Distributed Denial Of Service";
+
+(abbreviation == 'DDOS') ?
+    document.write(`Correct Abbreviation!<br>`) :
+    document.write(`Incorrect Abbreviation!<br>`);
+
+
+
+
+
+</script>
+
+</body>
+</html>
