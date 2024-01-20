@@ -10,15 +10,25 @@
 
 // 1. Logical AND (&&) 
 // Returns true if both operands are truthy, and false otherwise.
+document.write(`${true && true}<br>`);
+document.write(`${false && true}<br>`);
 document.write(`${true && false}<br>`);
-document.write(`${true && true}<br>`); 
+document.write(`${false && false}<hr>`);
 
 // More conditions can be passed!
-let hour = 10;
-let isWeekend = true;
-let isDayOff = false;
+let hour = 11;
+let minute = 46;
+let second = 30;
 
-document.write(`${ theName }<hr>`); 
+if(hour == 11 && minute == 46) {
+    document.write(`The time: ${hour}: ${minute}<hr>`);
+} else if(hour == 11 && minute == 40 && second ==30) {
+    document.write(`The time: ${hour}: ${minute}PM<hr>`);
+}
+
+// As with OR, any value is allowed as an operand of AND
+
+
 
 
 

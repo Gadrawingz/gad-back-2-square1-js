@@ -51,11 +51,21 @@ let firstName = "";
 let lastName = "";
 let nickName = "SuperNinja"; // If Blank, it will show Anonymous
 let theName= firstName || lastName || nickName || "Anonymous";
+
 // I have firstName, lastName and nickName variables, 
 // all optional (i.e. can be undefined or have falsy values).
 // OR(||) will choose the one that has the data and show it 
 // (or "Anonymous" if nothing set):
-document.write(`${ theName }<hr>`); 
+document.write(`${ theName }<hr>`);
+
+
+// Short-circuit evaluation
+
+// here, here || processes its args until the first truthy value is 
+// reached, and then the value is returned immediately, 
+// without even touching the other arg.
+true || document.write(`Is not printed<br>`); // true is considered
+false || document.write(`Can be printed<hr>`)
 
 
 
