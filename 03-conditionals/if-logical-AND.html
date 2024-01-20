@@ -27,8 +27,51 @@ if(hour == 11 && minute == 46) {
 }
 
 // As with OR, any value is allowed as an operand of AND
+if (1 && 0) {
+    document.write(`This will not work, Bcz the result is falsy<hr>`);
+}
 
+/* 
+AND “&&” finds the first falsy value
+-------------------------------------
+The AND && operator does the following:
+1. Evaluates operands from left to right.
 
+2. For each operand, converts it to a boolean. If the result is 
+false, stops and returns the original value of that operand.
+
+3. If all operands have been evaluated (i.e. all were truthy), 
+returns the last operand.
+*/
+// if the 1st operand is truthy, AND returns the 2nd operand
+document.write(`${ 1 && 0 }<br>`); // 0
+document.write(`${ 1 && 7 }<br>`); // 7
+document.write(`${ 1 && "Okay" }<hr>`); // Okay
+
+// if the 1st operand is falsy, AND returns it. 
+// The 2nd operand is ignored
+document.write(`${ null && 8 }<br>`); // null
+document.write(`${ 9 && "Great" && undefined }<br>`); // undefined
+document.write(`${ 0 && "No matter what" }<hr>`); // 0
+// can also pass several values in a row. Then the 1st falsy one is returned
+document.write(`${ 1 && 2 && null && 3 }<hr>`); // 0
+
+// when all values are truthy, the last value is returned
+document.write(`${ 1 && 2 && 3 }<hr>`); // 0
+
+// when all values are truthy, the last value is returned
+document.write(`${ 1 && 2 && 3 }<hr>`); // 0
+
+// TO REPLACE IF WITH || or && IS NOT RECOMMENDED!
+let b = 1;
+(b > 0) && document.write(`Greater than 0<br>`);
+
+// RECOMMENDED WAY:
+// The action in the right part of && would execute only if 
+// the evaluation reaches it. That is, only if (x > 0) is true.
+// So we basically have an analogue for:
+let d = 1;
+if(d > 0) document.write(`Greater than 0<br>`);
 
 
 

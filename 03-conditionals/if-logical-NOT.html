@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operator : NOT </title>
+</head>
+<body>
+<script>
+
+// NOT OPERATOR !
+// It returns a single arg and converts the operand 
+// to boolean type and returns the inverse value
+document.write(`${ !true }<br>`);
+document.write(`${ !0 }<br>`);
+document.write(`${ !1 }<hr>`);
+
+// Double NOT(!!) is sometimes used for converting a value 
+// to boolean type.
+document.write(!!"that is not-empty string" ,"<br>"); // true, OR
+document.write(!!null ,"<br>");
+
+// A little more verbose way to do the same thing is using Boolean fx
+document.write(Boolean("that is not-empty string"),"<br>"); // true
+document.write(Boolean(null),"<hr>"); // TR
+
+</script>
+</body>
+</html>
