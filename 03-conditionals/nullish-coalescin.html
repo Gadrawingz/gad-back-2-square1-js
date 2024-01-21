@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing - Use</title>
+</head>
+<body>
+<script>
+/*
+The nullish coalescing operator:??
+----------------------------------
+-Provides a short way 2 choose the first “defined” value from a list.
+-It’s used 2 assign default values to variables:
+
+The result of a ?? b is:
+-- if a is defined, then a,
+-- if a isn’t defined, then b.
+
+The ?? returns the first argument if it’s not null/undefined. Otherwise, the second one.
+
+We can rewrite result = a ?? b using the operators that 
+we already know, like this:
+let result = (a !== null && a !== undefined) ? a : b;
+*/
+
+
+// 1. Common use of ?? is to provide a default value:
+let userName;
+document.write(userName ?? "Anonymous<br>");
+// Here It shows userName because userName is not defined
+
+let colorName = "Green";
+document.write(colorName ?? "Black");
+document.write("<hr>");
+// It shows green because colorName is not null or undefined
+
+// 2. A sequence of ?? is used to select the first value from
+// a list that is not null or undefined
+let firstName = null;
+let lastName = null;
+let stageName = undefined;
+let nickName = "Gadrawin";
+let x = firstName ?? lastName ?? 
+stageName ?? nickName ?? "Gad Iradufasha" 
+
+document.write(x, "<br>"); // Gadrawin is shown!
+
+// 3. The OR || operator can be used in the same way as ?? also
+let y = firstName || lastName || stageName || "Dave";
+document.write(y, "<hr>"); // Dave!
+
+
+// 4. Important Difference between || and &&!
+// || returns the 1st truthy value, ?? return the 1st defined value
+let mainNumber = 0;
+let givenName = "";
+document.write(mainNumber || 435, "<br>"); // 435
+document.write(mainNumber ?? 435, "<br>"); // 0
+document.write(givenName || "Dave", "<br>"); // Dave
+document.write(givenName ?? "Dave", "<hr>"); 
+// it shows nothing, because givenName is assigned.
+
+/*
+The mainNumber || 435 checks height for being a falsy value:
+-> and it’s 0, falsy indeed. so the result is 435.
+
+The mainNumber ?? 435 checks height for being null/undefined, 
+and it’s not, so the result is height “as is”, that is 0.
+*/
+
+
+// 5. The ?? in case of Precedence:
+// The ?? has a very low precedence, only a bit higher than ? and =,
+// So Its important to add parentheses when using it in an expression
+
+let number1 = undefined;
+let number2 = null;
+let number3 = null;
+let sum1 = (number1 ?? 45) + (number2 ?? 105)
+let sum2 = (number2 ?? 30) + (number3 ?? 43)
+// 45 & 105 considered bcz number1 & number2 to are null/undefined
+// 30 & 43 considered bcz number2 & number3 to are assigned to null
+// If we omit parentheses, it would lead to incorrect results
+document.write(` ${sum1} <br>`);  // 150
+document.write(` ${sum2} <hr>`);  // 73
+
+
+// 6. Forbidden 2 use ?? with || or && without explicit parentheses
+let a = (1 && 2) ?? 3 // No problem
+// let b = 1 && 2  ?? 3, Syntax error
+
+document.write(` ${1 && 2} <hr>`);  // 73
+
+
+</script>
+</body>
+</html>
