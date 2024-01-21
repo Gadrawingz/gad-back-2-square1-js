@@ -22,6 +22,19 @@ while(increment <= 4) {
 }
 
 
+// A shorter way to write while (i != 0) is while (i):
+document.write("<hr>");
+let m = 5;
+while(m) { // Same as while(m != 0) {
+    document.write(m, "<br>");
+    // when m becomes 0, the condition becomes falsy & the loop stops
+    m--;
+}
+
+// Here curly braces are not required for a single-line body
+// If the loop body has a single statement, we can omit {}
+let n = 5;
+// while (n) document.write(n--);
 
 </script>
 </body>
