@@ -22,6 +22,12 @@ The ?? returns the first argument if it’s not null/undefined. Otherwise, the s
 We can rewrite result = a ?? b using the operators that 
 we already know, like this:
 let result = (a !== null && a !== undefined) ? a : b;
+
+FORMULA:
+Before running the transpiler
+m = m ?? 54 // if m is undefined/null, then the default val 54
+// After running the transpiler (same as above)
+m = (m !== undefined && m !== null) ? m : 54;
 */
 
 

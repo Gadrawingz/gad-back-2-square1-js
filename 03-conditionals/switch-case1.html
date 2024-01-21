@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case 01</title>
+</head>
+<body>
+<script>
+
+/* The "switch" statement
+----------------------
+->A switch statement can replace multiple if checks.
+->It gives a more descriptive way to compare a value with 
+multiple variants.
+-> The switch has one or more case blocks and an optional default.
+
+The syntax:
+-----------
+switch(x) {
+  case 'value1':  // if (x === 'value1')
+    // Code to execute
+    [break]
+  case 'value2':  // if (x === 'value2')
+    // Code to execute
+    [break]
+
+  default:
+    // Code to execute
+    [break]
+}*/
+
+let n = 2 + 5;
+switch (n) {
+    case 5:
+        document.write(`This number is too small<br>`);
+        break;
+    
+    case 6:
+        document.write(`This number is small<br>`);
+        break;
+    
+    case 7:
+        document.write(`This number matches exactly<br>`);
+        break;
+    
+    case 8:
+        document.write(`This number is too big<br>`);
+        break;
+
+    default:
+        document.write(`The given value is unknown!<br>`);
+        // No need of break here!
+}
+document.write(`The given value is unknown!<hr>`);
+// If there is no break then the execution continues
+// with the next case without any checks.
+
+// 2. Any expression can be a switch or case argument
+// Here both switch and case allow arbitrary expressions:
+let x = "5";
+let y = true;
+switch(+x) { // Number 5 
+    
+    case -y + 6 : // equal to 5
+        // This runs, Because -y is -1, so -1 + 6 equals to 5
+        document.write("Equal to 5!<br>");
+        break;
+
+    case +y + 7 :
+        document.write("Not this!<br>");
+        break;
+
+    default:
+        document.write("This won't run!<br>");
+}
+
+// Grouping of 'case':
+// Here, Several variants of case which share the same code 
+// can be grouped.
+let num = 1
+switch(num) {
+    case 1:
+        document.write("Number Uno!<br>");
+        break;
+
+    case 2:
+    case 3:
+    case 4:
+        document.write("The 2, 3 or 4!<br>");
+        // Here both case 2, 3 and 4 show the same message. 
+        break;
+    
+    case 5:
+    case 8:
+        document.write("The 5 and... "); //bcz no break go 2next line
+        document.write("The 8!<br>");
+        break;
+
+    default:
+        document.write("Invalid option!<br>");
+}
+
+// Type matters in switch case:
+// Here, the equality check is always strict. 
+// The values must be of the same type to match.
+let luckyNumber = "8";
+// or use luckyNumber = prompt("Enter a value: ");
+
+switch (luckyNumber) {
+    case '3':
+    case '6':
+        document.write("Three or Six!<br>");
+        break;
+
+    case 2:
+    case 4: // They should be of string type instead of number
+        document.write("Both, never executes!<br>");
+        break;
+
+    case "7":
+    case "9":
+        document.write("7 and 9 will execute!<br>");
+        break;
+
+    case "10":
+        document.write("The Ten!<br>");
+        break;
+
+    default:
+        document.write("Unknown Value!<br>");
+        break;
+}
+
+// Colors
+let colorCode = "#FFFFFF";
+
+switch (colorCode) {
+    case "#000000":
+        colorName = "Black(Primary)";
+        break;
+    
+    case "#FFFFFF":
+        colorName = "White(Primary)";
+        break;
+
+    default:
+        colorName = "Mixed or Unknown";
+}
+document.write(`Which Color? <strong>${colorName}</strong><br>`);
+
+</script>
+</body>
+</html>
