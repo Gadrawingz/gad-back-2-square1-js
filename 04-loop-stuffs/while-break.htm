@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking the loop - Gad Iradufasha</title>
+</head>
+<body>
+<script>
+
+// 1. Here this program sums numbers from 1 to 6
+let sum = 0;
+for (let t = 1; t <= 10; t++) {
+    document.write(t);
+    sum += t;
+}
+document.write(`<br>Sum of numbers is : ${sum}<hr>`);
+
+// 2. Here I ask the user for a series of numbers,
+// "breaking" when no number is entered.
+let theSum = 0;
+while (true) {
+    let value = +prompt("Enter a number: ", '')
+    if(!value) break;
+    // if user enters an empty line or cancels the input.
+    // It stops the loop immediately, passing ctrl to 
+    // the 1st line after the loop, Namely document.write...
+    theSum += value;
+}
+document.write(`<br>Sum of numbers is : ${theSum}<hr>`);
+/* 
+Combination “infinite loop + break"
+-------------------------------------------------
+That combination “as needed” is great for situations when a 
+loop’s condition must be checked not in the beginning or end of 
+the loop, but in the middle or even in several places of its body.
+*/
+
+
+
+</script>    
+</body>
+</html>
