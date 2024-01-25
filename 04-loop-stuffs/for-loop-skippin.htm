@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop - Skipping parts</title>
+</head>
+<body>
+<script>
+
+// 1. Here I can omit begin;
+// because I don't need anything at the top start
+let m = 0;
+for(; m <= 5; m++) {
+    // here we do not need for "begin"
+    document.write(m);
+}
+document.write("<br>");
+
+
+// 2. Here I can also remove step part:
+let h = 0;
+for(; h <= 4; ) {
+    document.write(h++);
+}
+document.write("<br>");
+
+// 3. To create infinite loop, we can actually remove everything
+/*
+for( ; ; ) {
+    // repeats without limits...
+    // Here semicolons ; must be present to avoid syntax error.}
+*/
+
+
+
+
+</script>
+</body>
+</html>

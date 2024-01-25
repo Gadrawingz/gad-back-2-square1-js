@@ -9,18 +9,42 @@
 
 <script>
 /*
-With "do... while" loop!
+With "for" loop!
 ------------------------
-It should only be used when you want the body of the loop to 
-execute at least once regardless of the condition being truthy.
+
+Syntax:
+for(begin ; condition ; step) {
+    // Loop body...
+}
 */
 
-let k = 2;
-do {
-    document.write(k);
-    k++;
-} while(k <= 10);
-document.write("<hr>");
+// for(let x = 0; x <= 4; x++) { }
+// rewriting a for loop by using if statement..
+// run begin
+let x = 0
+// if condition→run body and run step 
+if (x < 5) { document.write(x); x++ }
+// if condition→run body and run step
+if (x < 5) { document.write(x); x++ }
+// if condition→run body and run step
+if (x < 5) { document.write(x); x++ }
+// if condition→run body and run step
+if (x < 5) { document.write(x); x++ }
+// ...finish, because now x == 4
+if (x < 5) { document.write(x); x++ }
+
+
+// 2. Declaration of inline variable
+// Such variables are visible only inside the loop.
+// Here the "counter" variable k is declared right in the loop.
+
+// Benefits of defining a variable, outside loop. 
+let k = 0;
+for (k = 0; k <= 5; k++) {
+    document.write(k,"<br>") // 1 2 3 4 5
+}
+document.write(k,"<hr>") // 6. 
+// k is visible because declared outside of the loop
 
 
 
