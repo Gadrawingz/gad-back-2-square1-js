@@ -48,6 +48,46 @@ document.write(k,"<hr>") // 6.
 
 
 
+/*
+For By Example 4:
+Every loop iteration decreases init by 1. 
+The check while(i) stops the loop when init = 0.
+Hence, the steps of the loop form the following sequence (“loop unrolled”):
+
+Same as:
+
+let init = 6;
+alert(init--); // shows 6, decreases init to 5
+alert(init--); // shows 5, decreases init to 4
+alert(init--); // shows 4, decreases init to 3
+....
+alert(init--); // shows 1, decreases init to 0
+// done, while(init) check stops the loop
+*/
+let init = 6;
+while (init) {
+  document.write("<br>", init--);
+}
+
+
+// Postfix form with while: From 1 to 4;
+
+document.write("<hr>");
+let a = 0;
+while(++a < 5) document.write(a); // 1 2 3 4
+// The 1st value is i = 1, because ++i first increments i and 
+// then returns the new value.
+
+// Postfix form with while: From 1 to 4;
+document.write("<hr>");
+let b = 0;
+while(b++ < 5) document.write(b); // 1 2 3 4 5
+// The 1st value is again i = 1. The postfix form of i++ increments 
+// i and then returns the old value, so the comparison will use i = 0
+document.write("<hr>");
+
+</script>
+
 
 </script>
 </body>

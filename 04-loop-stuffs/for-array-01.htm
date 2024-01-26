@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Different Forms</title>
+    <title>For Array</title>
 </head>
 <body>
 <script>
 
-let i = 3;
-
-while (i) {
-  alert(i--);
+// Statement 1:
+const colors = ["Blue", "Green", "Red", "Black"];
+let a = 0;
+let result = "";
+for (; a < colors.length; ) {
+  result += colors[a];
+  // It can be increased inside loop
+  a++;
 }
+document.write(result, "<br>");
+
 
 </script>
 </body>
