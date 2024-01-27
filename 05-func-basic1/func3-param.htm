@@ -75,7 +75,9 @@ document.write("<hr>")
 
 // 1b. We can use OR || operator instead:
 function printSongName(artist, songName) {
-    songName = songName || "No song name provided";
+    // if songName is undefined or otherwise falsy, 
+    // set it to 'No song provided'
+    songName = songName || "No song provided";
     document.write(artist+" : "+songName+"<br>")
 }
 printSongName("Rae Sremmurd", "Swang");
@@ -101,7 +103,9 @@ function doMultiply1(n1, n2) {
 }
 doMultiply1(32, 2); // 64
 doMultiply1(13, 3); // 39
-doMultiply1(70); // 70
+doMultiply1(70); // 70 or
+doMultiply1(70, undefined); // 70
+
 document.write("<hr>")
 
 function doMultiply2(n1, n2) {
@@ -109,7 +113,21 @@ function doMultiply2(n1, n2) {
     return n1 * n2+"<br>";
 }
 document.write( doMultiply2(15, 3) ); // 45
-document.write( doMultiply2(68) ); // 68
+document.write( doMultiply2(68) +"<hr>"); // 68
+
+
+// Lastly, , it’s better when most falsy values
+// such as 0, should be considered “normal”:
+function displayCount(count) {
+    // if count is undefined or null, show "unknown"
+    document.write( count ?? "unknown" , "<br>");
+}
+displayCount(30); // 30
+displayCount(4); // 4
+displayCount(null); // unknown
+displayCount(); // unknown
+displayCount(0); // 0
+
 
 </script>
 </body>
