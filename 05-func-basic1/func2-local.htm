@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Define a Function!</title>
+</head>
+<body>
+<script>
+
+// 1. Defining a simple function;
+function printDevName() {
+    // Local variable
+    let devName = "Gad Iradufasha";
+    document.write(`Hello I am ${devName}`);
+}
+printDevName();
+// I can't print devName variable, as it is local to the function!
+
+// 2. Dealing with and accessing the Outer variables
+let friendName = "Abijuru";
+function showFriendName() {
+    let message = `Good morning, ${friendName}`;
+    document.write(`<hr>${message}<br>`);
+}
+
+showFriendName();
+
+// Using Parameterized function
+function greetFriend(t, friendName) {
+    let greetType = '';
+    if(t=='Morning' || t=='morning' || t=='Good morning') {
+        greetType = `Good morning ${friendName}`;
+    } else if(t=='Afternoon' || t=='afternoon' || t=='Good afternoon') {
+        greetType = `Good afternoon ${friendName}`;
+    } else if(t=='Evening' || t=='evening' || t=='Good evening') {
+        greetType = `Good evening ${friendName}`;
+    } else {
+        greetType = `Hello ${friendName}`;
+    }
+    document.write(greetType, "<br>");
+}
+
+// Calling function
+greetFriend('morning', 'Augustine');
+greetFriend('Afternoon', 'Nathan');
+
+</script>
+</body>
+</html>
