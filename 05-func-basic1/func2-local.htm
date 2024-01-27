@@ -8,6 +8,14 @@
 <body>
 <script>
 
+
+/*
+It’s a good practice to minimize the use of global variables. 
+Modern code has few or no globals. Most variables reside in 
+their functions. Sometimes though, they can be useful to 
+store project-level data.
+*/
+
 // 1. Defining a simple function;
 function printDevName() {
     // Local variable
@@ -21,10 +29,15 @@ printDevName();
 let friendName = "Abijuru";
 function showFriendName() {
     let message = `Good morning, ${friendName}`;
-    document.write(`<hr>${message}<br>`);
+    document.write(`<hr>${message}`);
+    // The fx has full access to the outer variable and 
+    // It can modify it as well.
+    friendName = "Benjamin";
+    document.write(`<br>${friendName}<hr>`);
 }
 
 showFriendName();
+document.write(`${friendName}<hr>`); // Not Abij..., It's Benjamin.
 
 // Using Parameterized function
 function greetFriend(t, friendName) {
@@ -44,6 +57,9 @@ function greetFriend(t, friendName) {
 // Calling function
 greetFriend('morning', 'Augustine');
 greetFriend('Afternoon', 'Nathan');
+
+//
+
 
 </script>
 </body>

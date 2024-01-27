@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// 1. Passing arbitrary data to functions using parameters.
+// Here the function has two parameters: from and message.
+
+function passTheMessage(from, message) {
+    document.write(from +" says \""+message+"\"<br>")
+}
+passTheMessage('Peter', 'Hello!');
+passTheMessage('Johnson', "What's up?");
+document.write("<hr>")
+
+// Here I can make variable "from" look nicer
+function passTheMessage2(from, message) {
+    from = "<span style='color:red; font-weight:bold'>"+from+"</span>";
+    document.write(from +" says \""+message+"\"<br>")
+}
+passTheMessage2('Peter', 'Whaguan!');
+passTheMessage2('Johnson', "What's poppin?");
+document.write("<hr>");
+/* 
+Here, When a value is passed as a function parameter, 
+it’s also called an argument.
+-Param is the variable listed inside the parentheses in the function declaration 
+(it’s a declaration time term).
+-Arg, is the value that is passed to the function when it is called 
+(it’s a call time term).
+*/
+
+// 2. Default param:
+// If a fx is called, but an arg is not provided, 
+// then the corresponding value becomes undefined.
+// 
+function sendMessage(person, message="Hello!") {
+    document.write(`${person} : "${message}"<br>`)
+}
+sendMessage("Gabby") 
+// above, we get value "Hello" because no arg passed!
+sendMessage("Pacific", "Hooray, Hit em up!");
+sendMessage("Martins", "Big up man, Keep coding!");
+document.write("<hr>")
+// Default function parameters allow named parameters to be 
+// initialized with default values if no value or undefined is passed.
+
+// So, It is evaluated every time the function is called without 
+// the respective parameter.
+
+// If a fx in JS is called with missing arguments 
+// (less than declared), the missing values are set to undefined.
+
+
+/* 
+Different ways to specify default params (esp. in old JS code)
+Several years ago, JS didn’t support this syntax 4 default parameters. 
+*/
+
+// 1a. We can explicitly check for undefined:
+function showDetailsA(person, message) {
+    if(message == undefined) {
+        message = 'No message'
+    }
+    document.write(person+": "+message+"<br>");
+}
+showDetailsA("Bosco", "Bite byanyu!");
+showDetailsA("Bosco");
+document.write("<hr>")
+
+// 1b. We can use OR || operator instead:
+function printSongName(artist, songName) {
+    songName = songName || "No song name provided";
+    document.write(artist+" : "+songName+"<br>")
+}
+printSongName("Rae Sremmurd", "Swang");
+printSongName("J.Cole");
+document.write("<hr>")
+
+// Complex way:
+function showDetailsB(person, message) {
+    // reused variable message again...
+    message = typeof message !== "undefined" ? message : "No message";
+    document.write(person+": "+message+"<br>");
+}
+showDetailsB("Jane", "I am good!");
+showDetailsB("Johnson");
+document.write("<hr>");
+
+// Again Complex way!
+function doMultiply1(n1, n2) {
+    if(n2 === undefined) {
+        n2 = 1;
+    }
+    document.write(`${n1 * n2}<br>`)
+}
+doMultiply1(32, 2); // 64
+doMultiply1(13, 3); // 39
+doMultiply1(70); // 70
+document.write("<hr>")
+
+function doMultiply2(n1, n2) {
+    n2 = typeof n2 !== "undefined" ? n2 : 1;
+    return n1 * n2+"<br>";
+}
+document.write( doMultiply2(15, 3) ); // 45
+document.write( doMultiply2(68) ); // 68
+
+</script>
+</body>
+</html>
