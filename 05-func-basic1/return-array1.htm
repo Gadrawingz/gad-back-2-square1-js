@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning values using Array</title>
+</head>
+<body>
+<script>
+
+// Here i can return multiple values using array!
+function getUserInfo() {
+    let name="Gad", age=80, gender="Male", city = "Ottawa";
+    return [name, age, gender, city];
+}
+
+// Use of the function...
+const [username, age, sex, address] = getUserInfo(); 
+document.write(
+    `${username} with ${age}/${sex} lives in ${address}`
+    // Gad with 80/Male lives in Ottawa
+);
+
+</script>
+</body>
+</html>

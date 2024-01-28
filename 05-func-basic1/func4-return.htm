@@ -15,6 +15,8 @@ A fx can return a value back into the calling code as the result.
 
 -The return statement is used to return a particular value 
 from the function to the function caller. 
+
+-It ends fx execution&specifies a value 2be returned to the fx caller.
 */
 
 // 1. Here, example would be a fx that multiply 2 numbers
@@ -30,7 +32,7 @@ function multiply(x, y) {
 // Calling!
 let result;
 result = multiply(4, 5);
-document.write(result+"<hr>"); // 20
+document.write(result+"<br>"); // 20
 
 result = multiply(10, 4);
 document.write(result+"<hr>"); // 40
@@ -53,7 +55,22 @@ if (checkStudentAge(age)) {
     document.write("Access denied...")
 }
 
-// 3. A fx with an empty return or without it, returns undefined.
+// 3. Here the fx will return a rectangle area, if both
+// value are greater than 0
+function getRectangleArea(width, height) {
+    if(width > 0 && height > 0) {
+        return width * height;
+    }
+    return 0; // 0 will be returned otherwise.
+}
+document.write("<hr style='background: blue; height: 10px;'>");
+document.write(getRectangleArea(-13, 12) +"<br>"); // 0
+document.write(getRectangleArea(30, 12) +"<br>"); // 360
+document.write(getRectangleArea(0, 100) +"<hr>"); // 0
+
+
+
+// 4. A fx with an empty return or without it, returns undefined.
 function returnNothing() {
     return; // or no return;
 }
