@@ -22,13 +22,26 @@ function loopLikeThis() {
         document.write(`${num} <br>`);
         num++;
     }
-
     // stuff3, 
     document.write("Hi my friends...");
 }
 loopLikeThis(); // calling...
+document.write("<hr>");
 
 
+// 2. This fx immediately stops at the point where return is called.
+function newCounter() {
+    // Infinite loop
+    for(let count = 1; ; count++) {
+        document.write(`${count}A<br>`); // Til 6
+        if (count === 6) {
+            return;
+        }
+        document.write(`${count}B<br>`); // Til 5
+    }
+    document.write(`${count}C<br>`); // Never appears
+}
+newCounter();
 
 </script>
 </body>
