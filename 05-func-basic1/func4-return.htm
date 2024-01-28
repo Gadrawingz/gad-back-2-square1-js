@@ -23,13 +23,42 @@ function multiply(x, y) {
     return multiply;
 }
 
+// The directive return can be in any place of the function. 
+// So, When the execution reaches it, the function stops, 
+// and the value is returned to the calling code
+
 // Calling!
 let result;
 result = multiply(4, 5);
-document.write(result+"<hr>");
+document.write(result+"<hr>"); // 20
 
 result = multiply(10, 4);
-document.write(result+"<hr>");
+document.write(result+"<hr>"); // 40
+
+// 2. There may be many occurrences of return in a single fx
+// Here I am check for age...
+function checkStudentAge(age) {
+    if(age >= 16) {
+        return true;
+    } else {
+        return confirm('Do u have a parent\'s permission?')
+    }
+}
+
+// Consuming function
+let age = prompt("Enter your age: ", 16)
+if (checkStudentAge(age)) {
+    document.write("Access allowed...")
+} else {
+    document.write("Access denied...")
+}
+
+// 3. A fx with an empty return or without it, returns undefined.
+function returnNothing() {
+    return; // or no return;
+}
+result = returnNothing() === undefined;
+document.write('<br>Result: ', result)// true
 
 
 </script>

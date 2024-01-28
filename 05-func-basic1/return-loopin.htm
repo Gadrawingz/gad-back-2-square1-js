@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning Value - Gad.js</title>
+</head>
+<body>
+<script>
+
+// Here this loop will stop if it gets to 9
+function loopLikeThis() {
+    let num = 1;
+    while(num) {
+        // stuff1, I can comment it out 2 see...
+        document.write(`${num} <br>`);
+        if(num == 9) {
+            return;
+        }
+
+        // stuff2, I can comment it out 2 see...
+        document.write(`${num} <br>`);
+        num++;
+    }
+
+    // stuff3, 
+    document.write("Hi my friends...");
+}
+loopLikeThis(); // calling...
+
+
+
+</script>
+</body>
+</html>
