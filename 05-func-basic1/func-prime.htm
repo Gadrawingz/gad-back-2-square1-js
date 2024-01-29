@@ -8,7 +8,24 @@
 <body>
 <script>
 
-    
+// 1st way: Function for finding prime number
+function showPrimeNumbers(num) {
+    for(let a = 2; a < num; a++) {
+        if(!isPrimeNumber(a)) continue;
+        document.write(a); // A Prime!
+    }
+}
+
+function isPrimeNumber(num) {
+    for(let a = 2; a < num; a++) {
+        if(num % 2 == 0) return false;
+    }
+    return true;
+}
+
+// Calling a sh***
+showPrimeNumbers()
+
 </script>   
 </body>
 </html>
