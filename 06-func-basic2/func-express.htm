@@ -18,8 +18,29 @@ let showDeveloperName = function() {
 document.write(showDeveloperName) // prints the func code.
 document.write("<hr>");
 showDeveloperName(); // Here we call the shit!
+document.write("<br>");
+// NB: A FX Expression is created when the execution reaches it 
+// and is usable only from that moment.
+/*
+Once the execution flow passes to the right side of the assignment
+sum = function… is created and can be used (assigned, called, etc. ) from now on.
+*/
+
+// callSomeone("Pete") error: this will not work
+let callSomeone = function(username) {
+    document.write(`What's up ${username}!<br>`);
+};
+callSomeone("Pete")
 
 
+
+// The diff is that: A FX Declaration can be called earlier than 
+// it is defined. For example, a global Function Declaration is 
+// visible in the whole script, no matter where it is.
+callSomeone2("Gad")
+function callSomeone2(username) {
+    document.write(`What's up ${username}!<br>`);
+}
 
 </script>   
 </body>
