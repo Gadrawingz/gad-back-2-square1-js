@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function | JS</title>
+</head>
+<body>
+<script>
+
+/*
+Another very simple&concise syntax for creating functions, that’s 
+often better than Function Expressions. is called “arrow functions”,
+let func = (arg1, arg2, ..., argN) => expression;
+
+shorter version of:
+let func = function(arg1, arg2, ..., argN) {
+  return expression;
+};
+*/
+
+let getFullName = (first, last) => `${first} ${last}`;
+// same as: 
+let getFullName2 = function(first, last) {
+    return `${first} ${last}`;
+};
+
+// Calling:
+document.write(getFullName("Gad", "Iradufasha") +"<br>");
+document.write(getFullName2("Peter", "Tosh") +"<br>");
+
+
+
+</script>
+</body>
+</html>
