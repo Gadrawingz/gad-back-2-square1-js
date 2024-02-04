@@ -33,6 +33,37 @@ if (age < 18) {
 welcome(); // Error: welcome is not defined
 // This will work on else
 
+
+
+/*
+2. To make welcome visible outside of if, we can do the following:
+The correct approach would be to use a Function Expression and 
+assign welcome to the variable that is declared outside of if and 
+has the proper visibility.
+*/
+
+let studentAge = prompt("What is your age?", 18);
+let message;
+if (studentAge < 18) {
+    message = function() {
+        document.write("Hi, You are allowed everything!<br>");
+    };
+
+} else {
+    message = function() {
+        document.write("Hey, Go home, Younger!<br>");
+    };
+}
+message(); // Hi, You are allowed everything!
+document.write("<hr>");
+
+// In short by using question mark operator:
+let message2 = (studentAge < 18) ?
+  function() { document.write("Hi, Access granted!<br>"); } :
+  function() { document.write("Hi, Not allowed, child!<br>"); };
+message2(); // ...
+
+
 </script>
 </body>
 </html>
