@@ -21,9 +21,22 @@ let power = function(x, num) {
     return result;
 }
 
+// Without validation : Bad 
 console.log("Program started...");
 console.log(power(4, 2)); // 16, same as (4 * 4)
 console.log(power(3, 3)); // 27, same as (3 * 3 * 3)
+
+
+// Calling With some validation in mind!
+let valX = 5;
+let valN = 3;
+
+if(valN < 1) {
+    console.log('Negative numbers like '+valN+' is not supported');
+} else {
+    console.log( power(valX, valN) ); // 125
+}
+
 
 
 </script>   
