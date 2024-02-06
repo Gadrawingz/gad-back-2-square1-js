@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimum func (min) redefined</title>
+</head>
+<body>
+    
+<script>
+
+/* 
+This fun minimum(a,b) will return the least of 2numbers a and b.
+
+For instance:
+min(4, -7) == -7
+min(3, 3) == 1
+*/
+
+function minimum1(x, y) {
+    if(x < y) {
+        return x;
+    } else {
+        return y;
+    }
+}
+
+// 2. OR 
+function minimum2(x, y) {
+    return x < y ? x : y;
+}
+
+// 3. With func expression
+let minimum3 = function(x, y) {
+    return x < y ? x : y;
+}
+
+// 4. With arrow function
+let minimum4 = (x, y) => x < y ? x : y;
+
+
+// Calling each one for testing!
+console.log( minimum1(30, 28) );
+console.log( minimum2(30, 28) );
+console.log( minimum3(30, 28) );
+console.log( minimum4(51, 180) );
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
