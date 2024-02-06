@@ -10,10 +10,20 @@
 
 // This web-page will prompts for x and n, 
 // and then shows the result of pow(x,n).
-// N.B: The fx should support only natural values of n: from 1,2...
+// N.B: The fx should support only natural values of num: from 1,2...
 
+// Lemme use fx expression in place of function declaration
+let power = function(x, num) {
+    let result = x;
+    for(let k = 1; k < num; k++) {
+        result *= x;
+    }
+    return result;
+}
 
-
+console.log("Program started...");
+console.log(power(4, 2)); // 16, same as (4 * 4)
+console.log(power(3, 3)); // 27, same as (3 * 3 * 3)
 
 
 </script>   
