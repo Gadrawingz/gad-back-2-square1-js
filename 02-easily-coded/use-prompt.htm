@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Use of Prompt</title>
+</head>
+<body>
+<script>
+/*
+let age = prompt('What is your age?', '')
+//document.write("I am "+age+" years old!")
+document.write(`I am ${age} years old!`)
+*/
+let num1 = prompt('Enter Number 1:', '');
+let num2 = prompt('Enter Number 2:', '');
+
+// best way
+let n1 = Number(num1);
+let n2 = Number(num2);
+let sum = n1 + n2;
+document.write(sum)
+
+// direct way!
+document.write(Number(num1) + Number(num2))
+
+</script>
+</body>
+</html>
