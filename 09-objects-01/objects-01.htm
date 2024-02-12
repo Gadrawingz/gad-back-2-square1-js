@@ -10,7 +10,7 @@
 
 // 1. Object: Literals and Properties:
 let developer = {
-    names : "Gad IRADUFASHA",
+    names : "Gad",
     handles : "Gadrawingz",
     gender : "Male",
     age : 79,
@@ -28,6 +28,12 @@ document.write(`Handle is: @${developer.handles}<br>`);
 // Iterate through Object to check for properties
 for(let dev in developer) {
     document.write(dev+"<br>");
+}
+
+// Iterate in full:
+document.write("<hr>");
+for(let dev in developer) {
+    document.write(`${dev} :: ${developer[dev]}<br>`);
 }
 
 
