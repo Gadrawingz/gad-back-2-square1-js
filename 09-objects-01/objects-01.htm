@@ -10,13 +10,25 @@
 
 // 1. Object: Literals and Properties:
 let developer = {
-    names : "Gad",
+    names : "Gad IRADUFASHA",
     handles : "Gadrawingz",
     gender : "Male",
     age : 79,
 };
 
-document.write()
+
+// Adding another prop
+developer.isSingle = true;
+
+
+// Getting property values of the object.
+document.write(`${developer.names}<br>`)
+document.write(`Handle is: @${developer.handles}<br>`);
+
+// Iterate through Object to check for properties
+for(let dev in developer) {
+    document.write(dev+"<br>");
+}
 
 
 </script>    
