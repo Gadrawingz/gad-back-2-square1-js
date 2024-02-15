@@ -72,7 +72,17 @@ function multiplyNumeric(myObject) {
 document.write(`${menu.width}<br>`);
 document.write(`${menu.height}<br>`);
 document.write(`${menu.title}`);
-document.write(`${multiplyNumeric(menu)}`);
+// document.write(`${multiplyNumeric(menu)}`);
+
+// 1. This function isEmpty(obj) will return true if the object 
+// has no properties, false otherwise.
+function isEmpty(obj1) {
+    for(let key in obj1) {
+        return false;
+        // if the loop has started, there is a property
+    }
+    return true;
+}
 
 
 </script>    
