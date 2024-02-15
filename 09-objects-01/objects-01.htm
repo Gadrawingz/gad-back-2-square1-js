@@ -16,10 +16,11 @@ let developer = {
     age : 79,
 };
 
-
 // Adding another prop
 developer.isSingle = true;
 
+// Changing age.
+developer.age = 57;
 
 // Getting property values of the object.
 document.write(`${developer.names}<br>`)
@@ -33,8 +34,23 @@ for(let dev in developer) {
 // Iterate in full:
 document.write("<hr>");
 for(let dev in developer) {
-    document.write(`${dev} :: ${developer[dev]}<br>`);
+    document.write(`${dev} <b>has</b> ${developer[dev]}<br>`);
 }
+
+// Let’s have an object with the phone codes:
+let codes = {
+  "49": "Germany",
+  "30": "Mars",
+  "41": "Switzerland",
+  "44": "Great Britain",
+  "1": "USA"
+};
+
+for(let code in codes) {
+    document.write(`${Number(code)}<br>`)
+    // document.write(`${typeof +code}<br>`)  
+}
+
 
 
 </script>    
