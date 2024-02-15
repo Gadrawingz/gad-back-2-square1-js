@@ -50,7 +50,29 @@ for(let code in codes) {
     document.write(`${Number(code)}<br>`)
     // document.write(`${typeof +code}<br>`)  
 }
+document.write("<br>");
 
+// This function multiplyNumeric(obj) that multiplies all 
+// numeric property values of obj by 2.
+let menu = {
+    width : 200,
+    height: 300,
+    title: "Menu one"
+};
+
+// This function should modify the object in-place.
+function multiplyNumeric(myObject) {
+    for(let key in myObject) {
+        if(typeof myObject[key] == 'number') {
+            myObject[key] *= 2;
+        }
+    }
+}
+
+document.write(`${menu.width}<br>`);
+document.write(`${menu.height}<br>`);
+document.write(`${menu.title}`);
+document.write(`${multiplyNumeric(menu)}`);
 
 
 </script>    
