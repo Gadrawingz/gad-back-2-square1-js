@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object cloning</title>
+</head>
+<body>
+<script>
+
+// Copying an obj variable creates 1 more ref to the same object.
+// How about duplicating object?
+// We can create a new object and replicate the structure of 
+// the existing one, by iterating over its properties and copying 
+// them on the primitive level.
+
+let developer = {
+    username : "Gadev",
+    realAge: 89,
+    website: "donnekt.com"
+};
+
+// The new empty obj
+let clone = {};
+
+// To copy all dev properties into it...
+for(let theKey in developer) {
+    clone[theKey] = developer[theKey];
+}
+
+// After that... clone is a fully independent object with 
+// the same content
+document.write(clone.username+" has site called: "+clone.website);
+// Gadev has site called: donnekt.com
+document.write("<br>");
+document.write(developer.username+" is "+clone.realAge+" years old!");
+// Gadev is 89 years old! 
+document.write("<br>");
+
+// Because each object is independent... i can change the data in it.
+// but it will not affect the data in the original object
+clone.website = "amazona.com";
+document.write(clone.username+" has site called: "+clone.website);
+
+
+</script>
+</body>
+</html>
