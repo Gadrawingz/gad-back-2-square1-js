@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object calculation</title>
+</head>
+<body>
+<script>
+
+// 1. These code will sum all marks and store in the variable sum.
+let marks = {
+    Angel : 36,
+    Maria : 24,
+    Jason : 47,
+    Kelly : 53
+};
+
+let sum = 0;
+for(let key in marks) {
+    sum += marks[key];
+}
+
+document.write(sum)
+
+
+</script> 
+</body>
+</html>
