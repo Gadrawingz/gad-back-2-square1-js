@@ -22,8 +22,20 @@ const prisoner = {
     lastName: "Chan",
     prisonerId : 4344,
 
-    getFullName : function() {
+    // this can be used to access other 
+    // properties & methods from the same object.
+    showFullName : function() {
         return this.firstName +" "+this.lastName;
     }
 };
 
+// In action...
+document.write("<br>");
+document.write(prisoner.showFullName());
+
+
+// 3. I can call this in a function
+function testThisInFunction() {
+    document.write('This in func: ', this);
+}
+testThisInFunction();
