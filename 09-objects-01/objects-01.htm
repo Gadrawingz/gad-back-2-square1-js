@@ -38,6 +38,8 @@ for(let dev in developer) {
 }
 
 // Let’s have an object with the phone codes:
+// 1. Here integer properties are sorted.
+// i.e. From ascending(low) to descending(high)...
 let codes = {
   "49": "Germany",
   "30": "Mars",
@@ -51,6 +53,20 @@ for(let code in codes) {
     // document.write(`${typeof +code}<br>`)  
 }
 document.write("<br>");
+
+// 2. Non-integer properties are listed in the creation order
+let person1 = {
+    fName : "Phil",
+    lName : "Foden",
+    email : "philfoden@gmail.com",
+};
+document.write("<br>");
+for (let prop in person1) {
+    document.write(prop+", ");
+}
+document.write("<hr>");
+
+
 
 // This function multiplyNumeric(obj) that multiplies all 
 // numeric property values of obj by 2.

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computed Properties | 01</title>
+</head>
+<body>
+<script>
+
+// 01. Computed Property Names: 
+// The ES6 computed property names feature allows developers 
+// to compute an expression as a property name on an object.
+let LAST_NAME = "lastName";
+let full = {
+    firstName : "Gad",
+    [LAST_NAME]: "Iradufasha"
+};
+
+document.write("<br>");
+document.write(full.firstName+" "+full.lastName); // Gad Iradufasha
+document.write("<br>");
+document.write(full.firstName+" "+full.LAST_NAME); // Gad undefined
+document.write("<br>");
+
+
+
+</script>
+</body>
+</html>
