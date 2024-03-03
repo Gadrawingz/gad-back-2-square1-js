@@ -10,6 +10,14 @@
 // 01. Computed Property Names: 
 // The ES6 computed property names feature allows developers 
 // to compute an expression as a property name on an object.
+/*
+Syntax:
+const propName = "dynamicPropName";
+const obj = {
+    [propName] : value
+};
+*/
+
 let LAST_NAME = "lastName";
 let full = {
     firstName : "Gad",
@@ -20,7 +28,40 @@ document.write("<br>");
 document.write(full.firstName+" "+full.lastName); // Gad Iradufasha
 document.write("<br>");
 document.write(full.firstName+" "+full.LAST_NAME); // Gad undefined
+document.write("<hr>");
+
+// b) one, two, three
+let theProp = 'three';
+let rankObject = {
+    one : 1,
+    two : 2,
+    [theProp] : 3, // three : 3
+}
+// When you access c property of the rank object, JS 
+// evaluates theProp and returns the property's value.
+document.write(rankObject.three); // 3
 document.write("<br>");
+
+
+// c. Like an object literal, The computed properties can also 
+// be used for getters and setters of a class.
+let name = 'fullName';
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName  = lastName;
+    }
+    get [name]() { // Same as fullName() {...
+        return this.firstName+" "+this.lastName;
+    }
+}
+
+let person1 = new Person("Mack", "Gad");
+document.write(person1.fullName); // Mack Gad
+document.write("<br>");
+
+
+// 02. Use of Dynamic Property Names:
 
 
 
