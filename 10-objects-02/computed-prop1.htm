@@ -62,8 +62,35 @@ document.write("<br>");
 
 
 // 02. Use of Dynamic Property Names:
+// Here, I will dynamically create an object and add a property 
+// name and assign a value to that specific property in order to 
+// create a customized key-value pair.  
+let LAST_NAME2 = "lastName2";
+let fullName2 = {
+    firstName2 : "Danny",
+};
+
+fullName2[LAST_NAME2] = "Trejo";
+document.write(`${fullName2.firstName2} ${fullName2.lastName2}`); 
+// Danny Trejo
+document.write("<br>");
 
 
+// 03. Using Conditional Expression as a prop. name.
+const age = 9;
+const theKey1 = "ageIsMoreThanFive";
+const theKey2 = "ageIsMoreThanNine";
+
+const obj1 = {
+    name : "Gadrone", 
+    [age > 9 ? theKey2 : theKey1] : true 
+}; 
+document.write("<hr>");
+document.write(obj1, "<br>"); // [object Object]
+document.write(obj1.ageIsMoreThanNine+"<br>"); // undefined
+document.write(obj1.ageIsMoreThanFive+"<br>"); // true
+document.write(obj1.name); // true
+document.write("<hr>");
 
 </script>
 </body>
