@@ -22,6 +22,24 @@ const student2 = { firstName : "Gadrone", lastName : "Ira"}
 let s1 = student.fullName.apply(student1);
 document.write(s1+"<br>");
 document.write(student.fullName.apply(student2));
+document.write("<hr>");
+
+// 02. The apply() Method with Arguments
+const person = {
+    fullName: function(age, gender) {
+        return this.name1+" "+this.name2+", age: "+age+", gender: "+gender;
+    }
+}
+
+const p1 = {name1: "Dwayne", name2: "John"}
+const p2 = {name1: "Nathan", name2: "Ake"}
+document.write( 
+    person.fullName.apply(p1, [32, "Female"])
+);
+document.write("<br>");
+document.write(
+    person.fullName.apply(p2, [21, "Male"])
+);
 
 
 </script>
