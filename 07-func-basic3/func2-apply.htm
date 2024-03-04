@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function.prototype.apply usage</title>
+</head>
+<body>
+<script>
+
+// ABOUT APPLY
+// 01. the fullName method of student is applied on student1:
+const student = {
+    fullName : function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const student1 = { firstName : "Maria", lastName : "Gomez"}
+const student2 = { firstName : "Gadrone", lastName : "Ira"}
+
+let s1 = student.fullName.apply(student1);
+document.write(s1+"<br>");
+document.write(student.fullName.apply(student2));
+
+
+</script>
+</body>
+</html>
