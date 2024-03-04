@@ -40,3 +40,32 @@ function greet() {
 // passing object as this value in call() method
 greet.call(player);
 
+
+// 04. Using it to invoke a fx and specifying the this value
+function printNow() {
+    document.write(this.animal, " sleeps between ", this.duration);
+}
+
+const object1 = {
+    animal : "Dogs",
+    duration : "4 and 8 hours",
+};
+
+const object2 = {
+    animal : "Cats",
+    duration : "12 and 17 hours",
+};
+
+document.write("<hr>")
+printNow.call(object1);
+document.write("<br>")
+printNow.call(object2);
+document.write("<hr>")
+
+// 05. Using call() to invoke a fx without specifying the 1st arg
+globalThis.globalProperty = "Gad Ira";
+
+function displayInfo() {
+    document.write("globalProp value is: "+this.globalProperty)
+}
+displayInfo.call();
