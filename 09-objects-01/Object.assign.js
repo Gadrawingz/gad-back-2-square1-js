@@ -38,3 +38,24 @@ Same as:
   canModify: true
 }
 */
+
+// 02. For copying prop name already exists, it gets overwritten.
+Object.assign(student, {fullName: "Harry Mack"})
+console.log(student.fullName);
+// now person = {fullName: "Harry Mack"} in place of "Gad Ir..."
+
+// 03. I can use Object.assin to perform a simple object cloning.
+let supporter = {
+    username : "Luis Diaz",
+    password : "ynwa24",
+    favoriteTeam : "Liverpool"
+};
+
+let cloneSupporter = Object.assign({}, supporter);
+console.log(cloneSupporter.username); // Luis Diaz
+console.log(cloneSupporter.password); // ynwa24
+
+
+
+
+
