@@ -40,8 +40,11 @@ function testThisInFunction() {
 }
 testThisInFunction();
 
-
-//
+/*
+Here, the code inside person8.sendMessage() may need the name of the person8.
+To access the object, a method can use the this keyword.
+The value of this is the object “before dot”, the one used to call the method.
+*/
 document.write("<hr>");
 // 2. This in method 2;
 let person8 = {
@@ -55,3 +58,29 @@ let person8 = {
     }
 };
 person8.sendMessage(); // Welcome, Pac.
+document.write("<br>");
+
+/* 
+3. USE OF SAME FUNCTION IN 2 OBJECTS;
+
+The value of this is evaluated during the run-time, depending on the context.
+For instance, here the same function is assigned to two different objects and 
+has different “this” in the calls:
+*/
+
+let user100 = { username: "Dwayne", age: 26 };
+let admin10 = { username: "Jeanne", age: 98 };
+
+function callSomeone() {
+    document.write(this.username+" is "+this.age+" years old<br>");
+}
+
+// Using the same functions in two objects
+user100.func = callSomeone;
+admin10.func = callSomeone;
+
+// Calling 'em:
+user100.func(); // (this == user100)
+admin10.func(); // (this == admin10)
+
+
