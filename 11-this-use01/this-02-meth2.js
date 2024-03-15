@@ -1,4 +1,5 @@
-// 2. This in combination with arrow function...
+// 1. This in combination with arrow function...
+// .................not working as expected
 let student = {
     names : "Pedro Gomez",
     age : 98,

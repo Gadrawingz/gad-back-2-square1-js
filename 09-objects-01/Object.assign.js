@@ -8,7 +8,6 @@ Syntax: Object.assign(dest, ...sources)
 It copies the properties of all source objects into the target dest, and then returns it as the result.
 */
 
-
 // 01. I add couple of permissions to student object
 let student = {
     fullName : "Gad Iradufasha",
@@ -54,8 +53,4 @@ let supporter = {
 let cloneSupporter = Object.assign({}, supporter);
 console.log(cloneSupporter.username); // Luis Diaz
 console.log(cloneSupporter.password); // ynwa24
-
-
-
-
 

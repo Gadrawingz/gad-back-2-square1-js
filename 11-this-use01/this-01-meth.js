@@ -39,3 +39,19 @@ function testThisInFunction() {
     document.write('This in func: ', this);
 }
 testThisInFunction();
+
+
+//
+document.write("<hr>");
+// 2. This in method 2;
+let person8 = {
+    username : "Pac",
+    password : "abc123",
+    age : 78,
+
+    // Method
+    sendMessage() {
+        document.write("Welcome, "+this.username);
+    }
+};
+person8.sendMessage(); // Welcome, Pac.
