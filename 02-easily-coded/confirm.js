@@ -7,3 +7,5 @@ let isDeveloper = confirm("Are you a developer?")
 document.write(`Answer: ${isDeveloper}`)
 document.write(`<br>`);
 document.write(`Data type: ${typeof isDeveloper}`)
+
+// Example 2:
